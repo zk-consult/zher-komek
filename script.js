@@ -413,5 +413,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         calcUpdate();
-    }
+    }    // ----------------------------------------------------
+    // Manual Tracking for WhatsApp Clicks (Facebook Pixel)
+    // ----------------------------------------------------
+    document.addEventListener('click', function(e) {
+        const waLink = e.target.closest('a[href*="wa.me"]');
+        if (waLink) {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact');
+            }
+            if (typeof window.trackEvent === 'function') {
+                window.trackEvent('whatsapp_click');
+            }
+        }
+    });
+
 });
