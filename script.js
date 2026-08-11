@@ -5,7 +5,7 @@
 
 const CONFIG = {
     WHATSAPP_URL: 'https://wa.me/77778006286',
-    FORM_ENDPOINT: 'https://zherkomek-api.ineverhe1p1991.workers.dev/api/leads'
+    FORM_ENDPOINT: 'https://zherkomek-api.ineverhe1p1991.workers.dev'
 };
 
 // Analytics event tracker helper
